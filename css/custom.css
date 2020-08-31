@@ -1,0 +1,74 @@
+body #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+body #container header {
+  background-color: #6f42c1;
+}
+
+body #container header ul {
+  font-weight: bold;
+}
+
+body #container header ul li a {
+  color: #FFF;
+}
+
+body #container main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+body #container main section h1 {
+  font-weight: 900;
+}
+
+body #container main .container .row .box1 p {
+  color: #666666;
+}
+
+body #container main .container .row .card .shadow-sm .background-image-animal {
+  background-image: url(../img/background/bg_animal.jpg);
+  height: 225px;
+  width: 100%;
+}
+
+body #container main .container .row .card .shadow-sm .background-image-cat {
+  background-image: url(../img/background/bg_cat.jpg);
+  height: 225px;
+  width: 100%;
+}
+
+body #container main .container .row .card .shadow-sm .background-image-squirrel {
+  background-image: url(../img/background/bg_squirrel.jpg);
+  height: 225px;
+  width: 100%;
+}
+
+body #container footer {
+  margin-top: auto;
+  color: #fff;
+  background-color: #6f42c1;
+}
+
+body #container footer small {
+  margin-left: 1rem;
+}
+
+body #container footer ul li a {
+  color: #fff;
+}
+/*# sourceMappingURL=custom.css.map */

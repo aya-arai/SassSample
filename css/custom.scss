@@ -1,0 +1,71 @@
+$border-radius: .25rem !default;
+$purple:  #6f42c1 !default;
+$white:    #fff !default;
+$gray:      #666666 !default;
+$imgnamelist : animal, cat, squirrel;
+
+body{
+    #container  {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        header{
+            background-color: $purple;
+            ul{
+                font-weight: bold;
+                li{
+                    a{
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            section{
+                h1{
+                    font-weight:900;
+                }
+            }
+            .container{
+                .row{
+                    .box1{
+                        p{
+                         color: $gray;
+                        }
+                    }
+                    .card{
+                        .shadow-sm{
+                            @each $imgname in $imgnamelist {
+                                .background-image-#{$imgname} {
+                                    background-image: url(../img/background/bg_#{$imgname}.jpg);
+                                    height: 225px;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            small{
+                margin-left: 1rem;
+            }
+            margin-top: auto;
+            color: $white;
+            background-color: $purple;
+            ul{
+                li{
+                    a{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    
+}
