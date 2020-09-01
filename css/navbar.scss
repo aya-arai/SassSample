@@ -1,0 +1,26 @@
+
+$navbar-padding-y: .5rem;
+$navbar-padding-x: 1rem;
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: space-between; 
+  padding: $navbar-padding-y $navbar-padding-x;
+
+  
+  %container-flex-properties {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container,
+  .container-fluid {
+    @extend %container-flex-properties;
+  }
+
+}

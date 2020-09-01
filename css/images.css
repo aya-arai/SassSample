@@ -1,0 +1,32 @@
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 10px;
+  background-color: red;
+  border: 1px solid #000;
+  /*
+  @include border-radius($thumbnail-border-radius);
+  @include box-shadow($thumbnail-box-shadow);
+  */
+  /*@include img-fluid();*/
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 50px;
+  line-height: 1;
+}
+
+/*
+.figure-caption {
+  @include font-size($figure-caption-font-size);
+  color: $figure-caption-color;
+}
+*/
+/*# sourceMappingURL=images.css.map */

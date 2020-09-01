@@ -1,0 +1,47 @@
+@mixin img-fluid() {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-fluid {
+  @include img-fluid();
+}
+
+$thumbnail-padding: 10px;
+$thumbnail-bg: red;
+$thumbnail-border-width: 1px;
+$thumbnail-border-color: #000;
+$figure-caption-color: blue;
+$spacer: 100px;
+
+// Image thumbnails
+.img-thumbnail {
+  padding: $thumbnail-padding;
+  background-color: $thumbnail-bg;
+  border: $thumbnail-border-width solid $thumbnail-border-color;
+  /*
+  @include border-radius($thumbnail-border-radius);
+  @include box-shadow($thumbnail-box-shadow);
+  */
+
+  // Keep them at most 100% wide
+  /*@include img-fluid();*/
+}
+
+
+.figure {
+  // Ensures the caption's text aligns with the image.
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: $spacer / 2;
+  line-height: 1;
+}
+
+/*
+.figure-caption {
+  @include font-size($figure-caption-font-size);
+  color: $figure-caption-color;
+}
+*/

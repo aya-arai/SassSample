@@ -1,0 +1,27 @@
+@import 'custom.scss';
+@import 'navbar.scss';
+
+$nav-color: #FFF !default;
+$footer-color: #999 !default;
+$border-color: #e5e5e5 !default;
+
+header{
+    nav{
+        color: $nav-color;
+    }
+}
+
+main{
+    #contents{
+        margin: 1rem 0;
+        
+    } 
+}
+
+footer{
+  padding: 2.5rem 0;
+  color: $footer-color;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
