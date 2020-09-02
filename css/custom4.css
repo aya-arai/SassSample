@@ -1,0 +1,176 @@
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 10px;
+  background-color: red;
+  border: 1px solid #000;
+  /*
+  @include border-radius($thumbnail-border-radius);
+  @include box-shadow($thumbnail-box-shadow);
+  */
+  /*@include img-fluid();*/
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 50px;
+  line-height: 1;
+}
+
+/*
+.figure-caption {
+  @include font-size($figure-caption-font-size);
+  color: $figure-caption-color;
+}
+*/
+body #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+body #container header {
+  background-color: #6f42c1;
+}
+
+body #container header ul {
+  font-weight: bold;
+}
+
+body #container header ul li a {
+  color: #FFF;
+}
+
+body #container main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+body #container main section h1 {
+  font-weight: 900;
+}
+
+body #container main .container .row .box1 p {
+  color: #666666;
+}
+
+body #container main .container .row .card .shadow-sm .background-image-animal {
+  background-image: url(../img/background/bg_animal.jpg);
+  height: 225px;
+  width: 100%;
+}
+
+body #container main .container .row .card .shadow-sm .background-image-cat {
+  background-image: url(../img/background/bg_cat.jpg);
+  height: 225px;
+  width: 100%;
+}
+
+body #container main .container .row .card .shadow-sm .background-image-squirrel {
+  background-image: url(../img/background/bg_squirrel.jpg);
+  height: 225px;
+  width: 100%;
+}
+
+body #container footer {
+  margin-top: auto;
+  color: #fff;
+  background-color: #6f42c1;
+}
+
+body #container footer small {
+  margin-left: 1rem;
+}
+
+body #container footer ul li a {
+  color: #fff;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  background: #6f42c1;
+}
+
+body form {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: auto;
+  /* Fallback for Edge
+-------------------------------------------------- */
+}
+
+body form .form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+body form .form-label-group input {
+  height: 3.125rem;
+  padding: .75rem;
+}
+
+body form .form-label-group label {
+  height: 3.125rem;
+  padding: .75rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  pointer-events: none;
+  cursor: text;
+  /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+@supports (-ms-ime-align: auto) {
+  body form .form-label-group {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+  }
+  body form .form-label-group label {
+    position: static;
+  }
+  body form .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+/*# sourceMappingURL=custom4.css.map */

@@ -1,0 +1,67 @@
+@import 'custom.scss';
+
+body{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  background: $purple;
+
+  form{
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    margin: auto;
+
+    
+    .form-label-group{
+        position: relative;
+        margin-bottom: 1rem;
+
+        input{
+            height: 3.125rem;
+            padding: .75rem;
+        }
+        label{
+            height: 3.125rem;
+            padding: .75rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            margin-bottom: 0; /* Override default `<label>` margin */
+            line-height: 1.5;
+            color: #495057;
+            pointer-events: none;
+            cursor: text; /* Match the input under the label */
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            transition: all .1s ease-in-out;
+        }
+    }
+
+    /* Fallback for Edge
+-------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+    .form-label-group {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    }
+  
+    .form-label-group label {
+      position: static;
+    }
+  
+    .form-label-group input::-ms-input-placeholder {
+      color: #777;
+    }
+  }
+  
+  }
+}

@@ -1,0 +1,23 @@
+@import 'custom.scss';
+$imgdrop: rec1, rec2, rec3;
+
+main{
+    .row{
+        .drop-area{
+            .drop-area-rec1{
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+
+footer{
+    .row{
+        .svg-area{
+            
+                margin-left: 1.5rem;
+            
+        }
+    }
+}
