@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,oFAAoF;AACpF,AAAA,eAAe,CAAC;EACd,cAAc,EAAE,kBAAkB;EAClC,qBAAqB,EAAE,MAAM;CAC9B",
+    "sources": [
+        "icons-material-design.scss"
+    ],
+    "names": [],
+    "file": "icons-material-design.css"
+}

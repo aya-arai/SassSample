@@ -1,0 +1,66 @@
+
+$top-header: 10%;
+$top-width : 60%;
+$left-center-width: 32%;
+$left-width : 64%;
+
+body {
+    display: flex;
+    min-height: 140vh;
+    flex-direction: column;
+
+    #main{
+        flex: 1 0 auto;
+
+        @media only screen and (min-width: 993px){
+            .db{
+                width: 70%;
+                max-width: none;
+                margin: 0 auto;
+
+                .card{
+                    position: absolute;
+                    width: 30%;
+                    margin-left: 1.5rem;
+                    .card-image{
+                        img{
+                            height: 300px;
+                            width: 100%;
+                        }
+                    }
+                }
+                .card-01{
+                    top:$top-header;
+                    left: 0;
+                }
+
+                .card-02{
+                    top:$top-header;
+                    left : $left-center-width;
+                    img{
+                        height: 400px !important;
+                    }
+                }
+                .card-03{
+                    top:$top-header;
+                    left: 64%;
+                }
+                .card-04{
+                    top: 55%;
+                    left: 0;
+                    img{
+                        height: 400px !important;
+                    }
+                }
+                .card-05{
+                    top: 70%;
+                    left: $left-center-width;
+                }
+                .card-06{
+                    top: $top-width;
+                    left: $left-width;
+                }
+            }
+        }
+    }
+}
