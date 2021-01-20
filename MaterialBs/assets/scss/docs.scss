@@ -1,0 +1,32 @@
+@import "../../scss/functions";
+@import "variables";
+@import "../../scss/core";
+
+// Load docs components
+@import "nav";
+@import "masthead";
+@import "featured-sites";
+@import "ads";
+@import "content";
+@import "page-header";
+@import "skiplink";
+@import "sidebar";
+@import "footer";
+@import "component-examples";
+@import "responsive-tests";
+@import "buttons";
+@import "callouts";
+@import "examples";
+@import "team";
+@import "browser-bugs";
+@import "brand";
+@import "colors";
+@import "clipboard-js";
+
+// Load docs dependencies
+@import "syntax";
+@import "anchor";
+@import "algolia";
+
+// Custom MDB Drawer styling for docs
+@import "drawer";

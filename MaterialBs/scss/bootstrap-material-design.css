@@ -1,0 +1,840 @@
+body {
+  font-weight: 400;
+}
+
+a:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.bmd-layout-canvas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.bmd-layout-container {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bmd-layout-header {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  max-height: 1000px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bmd-layout-content {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bmd-layout-spacer {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.bmd-layout-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background-color: transparent;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@supports (pointer-events: auto) {
+  .bmd-layout-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    visibility: visible;
+    pointer-events: none;
+  }
+}
+
+.btn {
+  position: relative;
+  margin-bottom: 0.3125rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  -webkit-transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1);
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1);
+  will-change: box-shadow, transform;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent;
+  border-color: #ccc;
+  /*
+  @include hover {
+    color: $color;
+    background-color: $focus-background;
+    border-color: $focus-border;
+  }
+  */
+  /*
+  &.btn-lg,
+  .btn-group-lg & {
+    @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $bmd-btn-font-size-lg, $line-height-lg, $btn-border-radius-lg);
+  }
+  &.btn-sm,
+  .btn-group-sm & {
+    @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $bmd-btn-font-size-sm, $line-height-sm, $btn-border-radius-sm);
+    font-size: $bmd-btn-font-size-sm;
+  }
+  */
+}
+
+.btn:focus, .btn.focus {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(153, 153, 153, 0.2);
+  border-color: rgba(153, 153, 153, 0.2);
+}
+
+.btn:active, .btn.active,
+.open > .btn.dropdown-toggle {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(153, 153, 153, 0.2);
+  border-color: rgba(153, 153, 153, 0.2);
+}
+
+.btn:active:hover, .btn:active:focus, .btn:active.focus, .btn.active:hover, .btn.active:focus, .btn.active.focus,
+.open > .btn.dropdown-toggle:hover,
+.open > .btn.dropdown-toggle:focus,
+.open > .btn.dropdown-toggle.focus {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(153, 153, 153, 0.4);
+  border-color: rgba(153, 153, 153, 0.4);
+}
+
+.open > .btn.dropdown-toggle.bmd-btn-icon {
+  color: inherit;
+  background-color: transparent;
+}
+
+.open > .btn.dropdown-toggle.bmd-btn-icon:hover {
+  background-color: rgba(153, 153, 153, 0.2);
+}
+
+.btn.disabled, .btn:disabled {
+  /*
+    @include hover {
+      background-color: $background;
+      border-color: $border;
+    }
+   */
+}
+
+.btn.disabled:focus, .btn.disabled.focus, .btn:disabled:focus, .btn:disabled.focus {
+  background-color: transparent;
+  border-color: #ccc;
+}
+
+.bg-inverse .btn {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent;
+  border-color: #ccc;
+  /*
+  @include hover {
+    color: $color;
+    background-color: $focus-background;
+    border-color: $focus-border;
+  }
+  */
+}
+
+.bg-inverse .btn:focus, .bg-inverse .btn.focus {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(204, 204, 204, 0.15);
+  border-color: rgba(204, 204, 204, 0.15);
+}
+
+.bg-inverse .btn:active, .bg-inverse .btn.active,
+.open > .bg-inverse .btn.dropdown-toggle {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(204, 204, 204, 0.15);
+  border-color: rgba(204, 204, 204, 0.15);
+}
+
+.bg-inverse .btn:active:hover, .bg-inverse .btn:active:focus, .bg-inverse .btn:active.focus, .bg-inverse .btn.active:hover, .bg-inverse .btn.active:focus, .bg-inverse .btn.active.focus,
+.open > .bg-inverse .btn.dropdown-toggle:hover,
+.open > .bg-inverse .btn.dropdown-toggle:focus,
+.open > .bg-inverse .btn.dropdown-toggle.focus {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(204, 204, 204, 0.25);
+  border-color: rgba(204, 204, 204, 0.25);
+}
+
+.open > .bg-inverse .btn.dropdown-toggle.bmd-btn-icon {
+  color: inherit;
+  background-color: transparent;
+}
+
+.open > .bg-inverse .btn.dropdown-toggle.bmd-btn-icon:hover {
+  background-color: rgba(204, 204, 204, 0.15);
+}
+
+.bg-inverse .btn.disabled, .bg-inverse .btn:disabled {
+  /*
+    @include hover {
+      background-color: $background;
+      border-color: $border;
+    }
+   */
+}
+
+.bg-inverse .btn.disabled:focus, .bg-inverse .btn.disabled.focus, .bg-inverse .btn:disabled:focus, .bg-inverse .btn:disabled.focus {
+  background-color: transparent;
+  border-color: #ccc;
+}
+
+.btn.btn-link {
+  background-color: transparent;
+}
+
+.btn.bmd-btn-fab, .btn.btn-raised,
+.btn-group-raised .btn {
+  /*
+    @include hover-focus() {
+      z-index: 1; 
+      @include box-shadow($bmd-shadow-4dp);
+    }
+    */
+}
+
+.btn.bmd-btn-fab.active, .btn.bmd-btn-fab:active, .btn.btn-raised.active, .btn.btn-raised:active,
+.btn-group-raised .btn.active,
+.btn-group-raised .btn:active {
+  z-index: 1;
+}
+
+.btn.bmd-btn-fab.focus, .btn.bmd-btn-fab:focus, .btn.btn-raised.focus, .btn.btn-raised:focus,
+.btn-group-raised .btn.focus,
+.btn-group-raised .btn:focus {
+  outline: 0;
+}
+
+.btn.btn-raised.btn-link,
+.btn-group-raised .btn.btn-link {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  /*
+  @include hover-focus-active() {
+    @content;
+  }
+  */
+}
+
+.btn.btn-raised.btn-link.active,
+.btn-group-raised .btn.btn-link.active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+fieldset[disabled][disabled] .btn.btn-raised, .btn.btn-raised.disabled, .btn.btn-raised:disabled, .btn.btn-raised[disabled], fieldset[disabled][disabled]
+.btn-group-raised .btn,
+.btn-group-raised .btn.disabled,
+.btn-group-raised .btn:disabled,
+.btn-group-raised .btn[disabled] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn.btn-outline {
+  border-color: currentColor;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.btn.bmd-btn-fab, .btn.bmd-btn-icon {
+  overflow: hidden;
+  font-size: 1.5rem;
+  line-height: 0;
+}
+
+.btn-group-lg .btn.bmd-btn-fab,
+.btn-group-sm .btn.bmd-btn-fab, .btn.bmd-btn-fab, .btn-group-lg .btn.bmd-btn-icon,
+.btn-group-sm .btn.bmd-btn-icon, .btn.bmd-btn-icon {
+  padding: 0;
+  border-radius: 50%;
+  line-height: 0;
+}
+
+.btn.bmd-btn-fab .material-icons, .btn.bmd-btn-icon .material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  -webkit-transform: translate(-0.75rem, -0.75rem);
+          transform: translate(-0.75rem, -0.75rem);
+}
+
+.btn.bmd-btn-fab {
+  width: 3.5rem;
+  min-width: 3.5rem;
+  height: 3.5rem;
+  -webkit-box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.26);
+          box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.26);
+}
+
+.btn.bmd-btn-fab .ripple-container {
+  border-radius: 50%;
+}
+
+.btn.bmd-btn-fab.bmd-btn-fab-sm,
+.btn-group-sm .btn.bmd-btn-fab {
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+}
+
+.btn.bmd-btn-icon {
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  margin: 0;
+  color: inherit;
+  line-height: 0;
+}
+
+.btn.bmd-btn-icon.bmd-btn-icon-sm,
+.btn-group-sm .btn.bmd-btn-icon {
+  width: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.btn.bmd-btn-icon.bmd-btn-icon-sm .material-icons,
+.btn-group-sm .btn.bmd-btn-icon .material-icons {
+  width: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-transform: translate(-0.5625rem, -0.5625rem);
+          transform: translate(-0.5625rem, -0.5625rem);
+}
+
+.btn .material-icons {
+  position: relative;
+  display: inline-block;
+  top: .25em;
+  margin-top: -1em;
+  margin-bottom: -1em;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+fieldset[disabled][disabled] .btn, .btn.disabled, .btn:disabled, .btn[disabled], fieldset[disabled][disabled]
+.input-group-btn .btn,
+.input-group-btn .btn.disabled,
+.input-group-btn .btn:disabled,
+.input-group-btn .btn[disabled], fieldset[disabled][disabled]
+.btn-group,
+.btn-group.disabled,
+.btn-group:disabled,
+.btn-group[disabled], fieldset[disabled][disabled]
+.btn-group-vertical,
+.btn-group-vertical.disabled,
+.btn-group-vertical:disabled,
+.btn-group-vertical[disabled] {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.bg-inverse fieldset[disabled][disabled] .btn, .bg-inverse .btn.disabled, .bg-inverse .btn:disabled, .bg-inverse .btn[disabled], .bg-inverse fieldset[disabled][disabled]
+.input-group-btn .btn, .bg-inverse
+.input-group-btn .btn.disabled, .bg-inverse
+.input-group-btn .btn:disabled, .bg-inverse
+.input-group-btn .btn[disabled], .bg-inverse fieldset[disabled][disabled]
+.btn-group, .bg-inverse
+.btn-group.disabled, .bg-inverse
+.btn-group:disabled, .bg-inverse
+.btn-group[disabled], .bg-inverse fieldset[disabled][disabled]
+.btn-group-vertical, .bg-inverse
+.btn-group-vertical.disabled, .bg-inverse
+.btn-group-vertical:disabled, .bg-inverse
+.btn-group-vertical[disabled] {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+fieldset[disabled][disabled] .btn, fieldset[disabled][disabled] .btn:hover, fieldset[disabled][disabled] .btn:focus, .btn.disabled, .btn.disabled:hover, .btn.disabled:focus, .btn:disabled, .btn:disabled:hover, .btn:disabled:focus, .btn[disabled], .btn[disabled]:hover, .btn[disabled]:focus, fieldset[disabled][disabled]
+.input-group-btn .btn, fieldset[disabled][disabled]
+.input-group-btn .btn:hover, fieldset[disabled][disabled]
+.input-group-btn .btn:focus,
+.input-group-btn .btn.disabled,
+.input-group-btn .btn.disabled:hover,
+.input-group-btn .btn.disabled:focus,
+.input-group-btn .btn:disabled,
+.input-group-btn .btn:disabled:hover,
+.input-group-btn .btn:disabled:focus,
+.input-group-btn .btn[disabled],
+.input-group-btn .btn[disabled]:hover,
+.input-group-btn .btn[disabled]:focus, fieldset[disabled][disabled]
+.btn-group, fieldset[disabled][disabled]
+.btn-group:hover, fieldset[disabled][disabled]
+.btn-group:focus,
+.btn-group.disabled,
+.btn-group.disabled:hover,
+.btn-group.disabled:focus,
+.btn-group:disabled,
+.btn-group:disabled:hover,
+.btn-group:disabled:focus,
+.btn-group[disabled],
+.btn-group[disabled]:hover,
+.btn-group[disabled]:focus, fieldset[disabled][disabled]
+.btn-group-vertical, fieldset[disabled][disabled]
+.btn-group-vertical:hover, fieldset[disabled][disabled]
+.btn-group-vertical:focus,
+.btn-group-vertical.disabled,
+.btn-group-vertical.disabled:hover,
+.btn-group-vertical.disabled:focus,
+.btn-group-vertical:disabled,
+.btn-group-vertical:disabled:hover,
+.btn-group-vertical:disabled:focus,
+.btn-group-vertical[disabled],
+.btn-group-vertical[disabled]:hover,
+.btn-group-vertical[disabled]:focus {
+  background: transparent;
+}
+
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  margin: 10px 1px;
+  /*
+  &.btn-group-raised {
+    @include box-shadow($bmd-shadow-2dp);
+  }
+  */
+}
+
+.btn-group .dropdown-menu,
+.btn-group-vertical .dropdown-menu {
+  border-radius: 0 0 0.125rem 0.125rem;
+}
+
+.btn-group .btn + .btn,
+.btn-group .btn,
+.btn-group .btn:active,
+.btn-group .btn-group,
+.btn-group-vertical .btn + .btn,
+.btn-group-vertical .btn,
+.btn-group-vertical .btn:active,
+.btn-group-vertical .btn-group {
+  margin: 0;
+}
+
+.btn-group > .btn-group,
+.btn-group-vertical > .btn-group {
+  margin: 0;
+}
+
+.checkbox label,
+label.checkbox-inline {
+  position: relative;
+  padding-left: 1.5625rem;
+}
+
+.checkbox label .checkbox-decorator,
+label.checkbox-inline .checkbox-decorator {
+  position: absolute;
+  left: 0;
+  padding: .7em;
+  margin: -.7em;
+  line-height: .7;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.checkbox label .checkbox-decorator .check,
+label.checkbox-inline .checkbox-decorator .check {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  overflow: hidden;
+  border: 0.125rem solid rgba(0, 0, 0, 0.54);
+  border-radius: 0.125rem;
+}
+
+.checkbox label .checkbox-decorator .check::before,
+label.checkbox-inline .checkbox-decorator .check::before {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -4px;
+  margin-left: 6px;
+  color: #757575;
+  content: "";
+  -webkit-box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+          box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: checkbox-off;
+          animation: checkbox-off;
+}
+
+.is-focused .checkbox label .checkbox-decorator .check::before, .is-focused
+label.checkbox-inline .checkbox-decorator .check::before {
+  -webkit-animation: checkbox-off 0.3s forwards;
+          animation: checkbox-off 0.3s forwards;
+}
+
+.checkbox label input[type=checkbox],
+label.checkbox-inline input[type=checkbox] {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.checkbox label input[type=checkbox]:focus + .checkbox-decorator .check::after,
+label.checkbox-inline input[type=checkbox]:focus + .checkbox-decorator .check::after {
+  opacity: 0.2;
+}
+
+.checkbox label input[type=checkbox]:checked + .checkbox-decorator .check,
+label.checkbox-inline input[type=checkbox]:checked + .checkbox-decorator .check {
+  color: theme-color(primary);
+  border-color: theme-color(primary);
+}
+
+.checkbox label input[type=checkbox]:checked + .checkbox-decorator .check::before,
+label.checkbox-inline input[type=checkbox]:checked + .checkbox-decorator .check::before {
+  color: theme-color(primary);
+  -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 032px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+          box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 032px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  -webkit-animation: checkbox-on 0.3s forwards;
+          animation: checkbox-on 0.3s forwards;
+}
+
+.checkbox label input[type=checkbox][disabled] + .checkbox-decorator .check::after,
+.checkbox label input[type=checkbox][disabled] .check::after,
+fieldset[disabled] .checkbox label input[type=checkbox] + .checkbox-decorator .check::after,
+fieldset[disabled] .checkbox label input[type=checkbox] .check::after,
+label.checkbox-inline input[type=checkbox][disabled] + .checkbox-decorator .check::after,
+label.checkbox-inline input[type=checkbox][disabled] .check::after,
+fieldset[disabled]
+label.checkbox-inline input[type=checkbox] + .checkbox-decorator .check::after,
+fieldset[disabled]
+label.checkbox-inline input[type=checkbox] .check::after {
+  background-color: rgba(0, 0, 0, 0.87);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.checkbox label input[type=checkbox][disabled] + .checkbox-decorator .check,
+.checkbox label input[type=checkbox][disabled] .check,
+fieldset[disabled] .checkbox label input[type=checkbox] + .checkbox-decorator .check,
+fieldset[disabled] .checkbox label input[type=checkbox] .check,
+label.checkbox-inline input[type=checkbox][disabled] + .checkbox-decorator .check,
+label.checkbox-inline input[type=checkbox][disabled] .check,
+fieldset[disabled]
+label.checkbox-inline input[type=checkbox] + .checkbox-decorator .check,
+fieldset[disabled]
+label.checkbox-inline input[type=checkbox] .check {
+  border-color: rgba(0, 0, 0, 0.26);
+}
+
+.checkbox label input[type=checkbox][disabled] + .checkbox-decorator .ripple-container,
+fieldset[disabled] .checkbox label input[type=checkbox] + .checkbox-decorator .ripple-container,
+label.checkbox-inline input[type=checkbox][disabled] + .checkbox-decorator .ripple-container,
+fieldset[disabled]
+label.checkbox-inline input[type=checkbox] + .checkbox-decorator .ripple-container {
+  display: none;
+}
+
+@-webkit-keyframes checkbox-on {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+
+@keyframes checkbox-on {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px;
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  }
+}
+
+@-webkit-keyframes checkbox-off {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    width: 0;
+    height: 0;
+    margin-top: -4px;
+    margin-left: 6px;
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  51% {
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-left: -2px;
+    -webkit-box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 10px inset;
+            box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 10px inset;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-left: -2px;
+    -webkit-box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+            box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes checkbox-off {
+  0% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset;
+  }
+  50% {
+    width: 0;
+    height: 0;
+    margin-top: -4px;
+    margin-left: 6px;
+    -webkit-box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+            box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px, 0 0 0 0 inset;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  51% {
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-left: -2px;
+    -webkit-box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 10px inset;
+            box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 10px inset;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    margin-left: -2px;
+    -webkit-box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+            box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.switch label {
+  position: relative;
+  padding-left: 2.4375rem;
+}
+
+.switch label .bmd-switch-track {
+  position: absolute;
+  top: 0.3125rem;
+  left: 0;
+  display: inline-block;
+  width: 2.125rem;
+  height: 0.875rem;
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.26)), color-stop(50%, rgba(0, 0, 0, 0.26)), color-stop(50%, #e0e0e0), to(#e0e0e0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.26) 50%, #e0e0e0 50%, #e0e0e0 100%);
+  background-position: 0%;
+  background-size: 4.25rem 0.875rem;
+  border-radius: 2.125rem;
+  -webkit-transition: background-position 0.2s ease-in;
+  transition: background-position 0.2s ease-in;
+}
+
+.switch label .bmd-switch-track::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background: #f1f1f1;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-transition: left 0.2s ease-in, background-color 0.2s ease-in, -webkit-transform 0.3s ease;
+  transition: left 0.2s ease-in, background-color 0.2s ease-in, -webkit-transform 0.3s ease;
+  transition: left 0.2s ease-in, background-color 0.2s ease-in, transform 0.3s ease;
+  transition: left 0.2s ease-in, background-color 0.2s ease-in, transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.switch label .bmd-switch-track:active::after {
+  -webkit-transform: translateY(-50%) scale3d(1.15, 0.85, 1);
+          transform: translateY(-50%) scale3d(1.15, 0.85, 1);
+}
+
+.switch label input {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.switch label input:checked + .bmd-switch-track {
+  background-position: -100%;
+}
+
+.switch label input:checked + .bmd-switch-track::after {
+  left: calc(100% - 1.25rem);
+  background-color: #999;
+}
+
+.switch label input:disabled + .bmd-switch-track:active::after {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.switch label input:disabled + .bmd-switch-track {
+  cursor: default;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.switch label input:disabled + .bmd-switch-track::after {
+  background: #bdbdbd;
+}
+
+/*
+@import "radios";
+@import "forms";
+@import "input-group";
+@import "list-group";
+@import "tables";
+@import "nav";
+@import "navbar";
+@import "alerts";
+@import "progress";
+@import "pagination";
+@import "type";
+@import "tooltip";
+@import "popover";
+@import "cards";
+@import "modal";
+@import "dropdown";
+@import "drawer";
+@import "themes";
+@import "ripples";
+@import "extensions";
+*/
+/*# sourceMappingURL=bootstrap-material-design.css.map */

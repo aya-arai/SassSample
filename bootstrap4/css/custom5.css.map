@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAeA,AAAA,IAAI,CAAA;EAUA,WAAW,EAAE,4BAA4B;CAC5C;;AArBG,MAAM,EAAE,SAAS,EAAE,MAAM;EAU7B,AAAA,IAAI,CAAA;IAEI,gBAAgB,EAAE,GAAG;IACrB,KAAK,EAAE,IAAI;GAQlB;;;AAhBG,MAAM,EAAE,SAAS,EAAE,KAAK;EAK5B,AAAA,IAAI,CAAA;IAMI,gBAAgB,EAAC,IAAI;IACrB,KAAK,EAAE,IAAI;GAIlB",
+    "sources": [
+        "custom5.scss"
+    ],
+    "names": [],
+    "file": "custom5.css"
+}

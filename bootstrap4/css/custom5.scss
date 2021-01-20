@@ -1,0 +1,27 @@
+//ここでpcとspの幅を定義
+$pc: 1040px; 
+$sp: 740px; 
+//ここでmax-widthを指定
+@mixin pc {
+    @media (max-width: ($pc)) {
+      @content;
+    }
+  }
+  @mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+  }
+
+body{
+    @include pc {
+        background-color: red;
+        color: #fff;
+    };
+    @include sp {
+        background-color:blue;
+        color: #fff;
+    };
+
+    font-family: Arial, Helvetica, sans-serif;
+}
